@@ -12,7 +12,9 @@ const Stack = createNativeStackNavigator();
 
 function MessageTab() {
   return (
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator
+      initialRouteName="Message"
+      screenOptions={{headerShown: false}}>
       <Stack.Screen name="Message" component={MessageScreen} />
       <Stack.Screen name="Usermsg" component={UsermsgScreen} />
     </Stack.Navigator>
@@ -21,16 +23,20 @@ function MessageTab() {
 
 function ProfileTab() {
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Profile" component={ProfileScreen} />
+    <Stack.Navigator
+      initialRouteName="ProfileStack"
+      screenOptions={{headerShown: false}}>
+      <Stack.Screen name="ProfileStack" component={ProfileScreen} />
     </Stack.Navigator>
   );
 }
 
 function HomeTab() {
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Profile" component={HomeScreen} />
+    <Stack.Navigator
+      initialRouteName="Main"
+      screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Main" component={HomeScreen} />
       <Stack.Screen name="NewPost" component={CreatePost} />
     </Stack.Navigator>
   );

@@ -5,7 +5,7 @@ const LoginScreen = ({navigation}) => {
   return (
     <View>
       <Text>This is my Login Screen</Text>
-      <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+      <TouchableOpacity onPress={() => navigation.navigate('Main')}>
         <Text>Go to Home</Text>
       </TouchableOpacity>
     </View>

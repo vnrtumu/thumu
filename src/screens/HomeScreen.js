@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, Button} from 'react-native';
 
-export default function HomeScreen(navigation) {
+const HomeScreen = ({navigation}) => {
   return (
     <View>
       <Text>This is Home Screen</Text>
@@ -12,6 +12,8 @@ export default function HomeScreen(navigation) {
       </Button>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({});
+
+export default HomeScreen;
