@@ -9,17 +9,16 @@ import {
 import Header from '../components/Header';
 import SocialBtn from '../components/SocialBtn';
 import {COLORS, FONTS, icons} from '../constants';
-
 import PrimaryBtn from '../components/PrimaryBtn';
 
-const LoginScreen = ({navigation}) => {
+const SignupScreen = ({navigation}) => {
   return (
     <View style={styles.screenWrapper}>
-      <Header parentStyle={styles.header} headerTitle="Log in" />
+      <Header parentStyle={styles.header} headerTitle="Sign Up" />
       {/* The social btns */}
       <View style={styles.socialWrapper}>
         <Text style={[styles.loginSubTitle, {...FONTS.body3}]}>
-          Login in with one of the following options
+          Sign Up in with one of the following options
         </Text>
         <View style={styles.socialBtnWrapper}>
           <SocialBtn imageSrc={icons.google} socialStyle={styles.socialBtn} />
@@ -29,6 +28,14 @@ const LoginScreen = ({navigation}) => {
 
       {/* The Form Contents */}
       <View style={styles.formContainer}>
+        <Text style={styles.nameLabel}>Name</Text>
+        <TextInput
+          placeholder="Name"
+          style={[styles.emailInput, {...FONTS.body3}]}
+          autoCapitalize={false}
+          autoCompleteType={false}
+        />
+
         <Text style={styles.emailLabel}>Email</Text>
         <TextInput
           placeholder="venky@gmail.com"
@@ -45,14 +52,14 @@ const LoginScreen = ({navigation}) => {
           secureTextEntry
         />
 
-        <PrimaryBtn btnText="Create Account" />
+        <PrimaryBtn btnText="Log in" />
 
         <View style={styles.bottomText}>
           <Text style={[styles.dont, {...FONTS.body3}]}>
-            Don't have account?
+            Already have an account?
           </Text>
-          <TouchableOpacity onPress={() => navigation.navigate('Signup')}>
-            <Text style={[styles.signup, {...FONTS.h3}]}>Sign Up</Text>
+          <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+            <Text style={[styles.signup, {...FONTS.h3}]}>Log in</Text>
           </TouchableOpacity>
         </View>
       </View>
@@ -88,7 +95,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     marginTop: 40,
   },
+  nameLabel: {
+    color: COLORS.white,
+  },
   emailLabel: {
+    marginTop: 30,
     color: COLORS.white,
   },
   passLabel: {
@@ -123,5 +134,4 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
 });
-
-export default LoginScreen;
+export default SignupScreen;
