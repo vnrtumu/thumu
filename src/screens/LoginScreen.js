@@ -33,15 +33,15 @@ const LoginScreen = ({navigation}) => {
         <TextInput
           placeholder="venky@gmail.com"
           style={[styles.emailInput, {...FONTS.body3}]}
-          autoCapitalize={false}
-          autoCompleteType={false}
+          autoCapitalize="none"
+          autoCompleteType="off"
         />
 
         <Text style={styles.passLabel}>Password</Text>
         <TextInput
           placeholder="Password"
           style={[styles.emailInput, {...FONTS.body3}]}
-          autoCapitalize={false}
+          autoCapitalize="none"
           secureTextEntry
         />
 
