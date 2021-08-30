@@ -1,13 +1,8 @@
-import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import StackNav from './src/navigation/StackNav';
+import React from 'react';
+import Providers from './src/navigation';
 
-function App() {
-  return (
-    <NavigationContainer>
-      <StackNav />
-    </NavigationContainer>
-  );
-}
+const App = () => {
+  return <Providers />;
+};
 
 export default App;

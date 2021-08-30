@@ -6,6 +6,8 @@ import SignupScreen from '../screens/SignupScreen';
 import OnboardingScreen from '../screens/OnboardingScreen';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
+import {GoogleSignin} from '@react-native-google-signin/google-signin';
+
 const Stack = createNativeStackNavigator();
 
 const StackNav = () => {
@@ -19,6 +21,11 @@ const StackNav = () => {
       } else {
         setIsFirstLaunch(false);
       }
+    });
+
+    GoogleSignin.configure({
+      webClientId:
+        '882405128720-f0cpkihk60mkl8nlgl55843nbkserllq.apps.googleusercontent.com',
     });
   }, []);
 

@@ -3,15 +3,15 @@ import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {COLORS, FONTS} from '../constants';
 import LinearGradient from 'react-native-linear-gradient';
 
-const PrimaryBtn = props => {
+const PrimaryBtn = ({btnText, ...rest}) => {
   return (
-    <TouchableOpacity style={styles.primaryBtn}>
+    <TouchableOpacity style={styles.primaryBtn} {...rest}>
       <LinearGradient
         start={{x: 0, y: 0}}
         end={{x: 1, y: 0}}
         colors={['#ff33cc', '#ff2ccd', '#fc7fc0']}
         style={styles.LGBlock}>
-        <Text style={[styles.BtnText, {...FONTS.h3}]}>{props.btnText}</Text>
+        <Text style={[styles.BtnText, {...FONTS.h3}]}>{btnText}</Text>
       </LinearGradient>
     </TouchableOpacity>
   );

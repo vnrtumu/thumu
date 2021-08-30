@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
 import {
   StyleSheet,
   Text,
@@ -11,8 +11,13 @@ import SocialBtn from '../components/SocialBtn';
 import {COLORS, FONTS, icons} from '../constants';
 
 import PrimaryBtn from '../components/PrimaryBtn';
+import {AuthContext} from '../navigation/AuthProvider';
 
 const LoginScreen = ({navigation}) => {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const {login, googleLogin, fbLogin} = useContext(AuthContext);
   return (
     <View style={styles.screenWrapper}>
       <Header parentStyle={styles.header} headerTitle="Log in" />
@@ -22,8 +27,16 @@ const LoginScreen = ({navigation}) => {
           Login in with one of the following options
         </Text>
         <View style={styles.socialBtnWrapper}>
-          <SocialBtn imageSrc={icons.google} socialStyle={styles.socialBtn} />
-          <SocialBtn imageSrc={icons.facebook} socialStyle={styles.socialBtn} />
+          <SocialBtn
+            imageSrc={icons.google}
+            socialStyle={styles.socialBtn}
+            onPress={() => googleLogin()}
+          />
+          <SocialBtn
+            imageSrc={icons.facebook}
+            socialStyle={styles.socialBtn}
+            onPress={() => fbLogin()}
+          />
         </View>
       </View>
 
@@ -35,6 +48,7 @@ const LoginScreen = ({navigation}) => {
           style={[styles.emailInput, {...FONTS.body3}]}
           autoCapitalize="none"
           autoCompleteType="off"
+          onChangeText={userEmail => setEmail(userEmail)}
         />
 
         <Text style={styles.passLabel}>Password</Text>
@@ -43,9 +57,10 @@ const LoginScreen = ({navigation}) => {
           style={[styles.emailInput, {...FONTS.body3}]}
           autoCapitalize="none"
           secureTextEntry
+          onChangeText={userPassword => setPassword(userPassword)}
         />
 
-        <PrimaryBtn btnText="Create Account" />
+        <PrimaryBtn btnText="Log in" onPress={() => login(email, password)} />
 
         <View style={styles.bottomText}>
           <Text style={[styles.dont, {...FONTS.body3}]}>

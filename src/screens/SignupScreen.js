@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useContext} from 'react';
 import {
   StyleSheet,
   Text,
@@ -11,7 +11,14 @@ import SocialBtn from '../components/SocialBtn';
 import {COLORS, FONTS, icons} from '../constants';
 import PrimaryBtn from '../components/PrimaryBtn';
 
+import {AuthContext} from '../navigation/AuthProvider';
+
 const SignupScreen = ({navigation}) => {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  const {register} = useContext(AuthContext);
   return (
     <View style={styles.screenWrapper}>
       <Header parentStyle={styles.header} headerTitle="Sign Up" />
@@ -34,6 +41,7 @@ const SignupScreen = ({navigation}) => {
           style={[styles.emailInput, {...FONTS.body3}]}
           autoCapitalize="none"
           autoCompleteType="off"
+          onChangeText={userName => setName(userName)}
         />
 
         <Text style={styles.emailLabel}>Email</Text>
@@ -42,6 +50,7 @@ const SignupScreen = ({navigation}) => {
           style={[styles.emailInput, {...FONTS.body3}]}
           autoCapitalize="none"
           autoCompleteType="off"
+          onChangeText={userEmail => setEmail(userEmail)}
         />
 
         <Text style={styles.passLabel}>Password</Text>
@@ -50,9 +59,13 @@ const SignupScreen = ({navigation}) => {
           style={[styles.emailInput, {...FONTS.body3}]}
           autoCapitalize="none"
           secureTextEntry
+          onChangeText={userPassword => setPassword(userPassword)}
         />
 
-        <PrimaryBtn btnText="Log in" />
+        <PrimaryBtn
+          btnText="Create Account"
+          onPress={() => register(email, password)}
+        />
 
         <View style={styles.bottomText}>
           <Text style={[styles.dont, {...FONTS.body3}]}>

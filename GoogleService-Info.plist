@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>882405128720-44nlek3b6kps2rdoe31d1sckvvr5bp69.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.882405128720-44nlek3b6kps2rdoe31d1sckvvr5bp69</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDlE1cKhg266xrzdLhcPCU35f3nS79Bp70</string>
+	<key>GCM_SENDER_ID</key>
+	<string>882405128720</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.thumu</string>
+	<key>PROJECT_ID</key>
+	<string>thumu-be6f9</string>
+	<key>STORAGE_BUCKET</key>
+	<string>thumu-be6f9.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:882405128720:ios:1b89beab6fb73aa7c26895</string>
+</dict>
+</plist>

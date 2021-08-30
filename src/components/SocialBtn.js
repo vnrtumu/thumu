@@ -2,12 +2,10 @@ import React from 'react';
 import {StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 import {COLORS} from '../constants';
 
-const SocialBtn = props => {
+const SocialBtn = ({imageSrc, ...rest}) => {
   return (
-    <TouchableOpacity
-      style={styles.btnWrapper}
-      onPress={() => alert('Clicked')}>
-      <Image source={props.imageSrc} style={styles.socialBtnImage} />
+    <TouchableOpacity style={styles.btnWrapper} {...rest}>
+      <Image source={imageSrc} style={styles.socialBtnImage} />
     </TouchableOpacity>
   );
 };
