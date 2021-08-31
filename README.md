@@ -25,13 +25,9 @@
 `readme-md-generator` is able to read your environment (package.json, git config...) to suggest you default answers during the `README.md` creation process:
 
 <p align="center">
- 
 
-  <video width="400" controls>
-    <source src="https://youtu.be/k0BOOX7108M" type="video/mp4">
-    <source src="mov_bbb.ogg" type="video/ogg">
-    Your browser does not support HTML video.
-  </video>
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/XHECZDy_ctg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 Generated `README.md`:
