@@ -26,6 +26,12 @@
 
 <p align="center">
   <img width="700" align="center" src="https://user-images.githubusercontent.com/9840435/60266022-72a82400-98e7-11e9-9958-f9004c2f97e1.gif" alt="demo"/>
+
+  <video width="400" controls>
+    <source src="https://youtu.be/k0BOOX7108M" type="video/mp4">
+    <source src="mov_bbb.ogg" type="video/ogg">
+    Your browser does not support HTML video.
+  </video>
 </p>
 
 Generated `README.md`:
@@ -138,9 +144,9 @@ This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/mast
 
 ---
 
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
-=======
+# _This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
 #hi there
 Thsi sis ahjkcbaa
->>>>>>> 5b7d0284db289bac81384991658a76fd7553e5fc
 
+> > > > > > > 5b7d0284db289bac81384991658a76fd7553e5fc
