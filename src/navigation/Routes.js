@@ -5,7 +5,7 @@ import {AuthContext} from './AuthProvider';
 
 import BottomTab from './BottomTab';
 
-import StackNav from './StackNav';
+import AuthStack from './AuthStack';
 
 const Routes = () => {
   const {user, setUser} = useContext(AuthContext);
@@ -27,7 +27,7 @@ const Routes = () => {
 
   return (
     <NavigationContainer>
-      {user ? <BottomTab /> : <StackNav />}
+      {user ? <BottomTab /> : <AuthStack />}
     </NavigationContainer>
   );
 };

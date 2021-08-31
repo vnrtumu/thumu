@@ -11,13 +11,14 @@ const HomeScreen = ({navigation}) => {
   return (
     <View>
       <Text>Welcome to Home Screen </Text>
-      <Text>{user.email} </Text>
+
       <Button
         onPress={() => navigation.navigate('NewPost')}
         title="Add New Post">
         Add New Post
       </Button>
       <Image style={styles.cover} source={{uri: user.photoURL}} />
+      <Text>{user.email ? user.email : user.displayName}</Text>
       <PrimaryBtn btnText="Log Out" onPress={() => logout()} />
     </View>
   );

@@ -10,7 +10,7 @@ import {GoogleSignin} from '@react-native-google-signin/google-signin';
 
 const Stack = createNativeStackNavigator();
 
-const StackNav = () => {
+const AuthStack = () => {
   const [isFirstLaunch, setIsFirstLaunch] = useState(null);
 
   useEffect(() => {
@@ -55,4 +55,4 @@ const StackNav = () => {
   }
 };
 
-export default StackNav;
+export default AuthStack;
