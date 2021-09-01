@@ -1,26 +1,76 @@
 import React, {useState, useContext} from 'react';
-import {StyleSheet, Text, View, Button, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 
 import PrimaryBtn from '../components/PrimaryBtn';
 
 import {AuthContext} from '../navigation/AuthProvider';
+
+import {icons, COLORS, FONTS} from '../constants';
+
+import {
+  Container,
+  Card,
+  UserInfo,
+  UserImg,
+  UserName,
+  UserInfoText,
+  PostTime,
+  PostText,
+  PostImg,
+  InteractionWrapper,
+  Interaction,
+  InteractionText,
+  Divider,
+} from '../styles/FeedStyles';
+
+import PostCard from '../components/PostCard';
 const HomeScreen = ({navigation}) => {
   const {user, logout} = useContext(AuthContext);
-
-  console.log(user);
   return (
-    <View>
-      <Text>Welcome to Home Screen </Text>
+    <Container>
+      <Card>
+        <UserInfo>
+          <UserImg source={require('../assets/images/users/user-1.jpg')} />
+          <UserInfoText>
+            <TouchableOpacity>
+              <UserName> Venkat reddy</UserName>
+            </TouchableOpacity>
+            <PostTime>2m</PostTime>
+          </UserInfoText>
+        </UserInfo>
+        <PostText>
+          lorem ipsum dolor sit amet lorem ipsum dolor sit amet,
+        </PostText>
 
-      <Button
-        onPress={() => navigation.navigate('NewPost')}
-        title="Add New Post">
-        Add New Post
-      </Button>
-      <Image style={styles.cover} source={{uri: user.photoURL}} />
-      <Text>{user.email ? user.email : user.displayName}</Text>
-      <PrimaryBtn btnText="Log Out" onPress={() => logout()} />
-    </View>
+        <Divider />
+
+        <InteractionWrapper>
+          <Interaction>
+            <Image
+              source={icons.like}
+              style={{height: 30, width: 30, tintColor: COLORS.primary}}
+            />
+            <InteractionText>Liked</InteractionText>
+          </Interaction>
+          <Interaction>
+            <Image
+              source={icons.comment}
+              style={{height: 30, width: 30, tintColor: COLORS.primary}}
+            />
+            <InteractionText>commentText</InteractionText>
+          </Interaction>
+        </InteractionWrapper>
+      </Card>
+      <PostCard />
+      <PrimaryBtn btnText="Log out" onPress={() => logout()} />
+    </Container>
   );
 };
 
