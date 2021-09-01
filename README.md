@@ -15,6 +15,14 @@ Then install all the packages with cmd `npm install`
 now do `pod install` in the same ios folder
 fillnally run `react-native run-ios`
 
+## ✨ Integrating Firebase with our app
+
+## ✨ Installing Facebook Login Steps
+
+## ✨ Installing Google Login Steps
+
+
+
 ## ✨ Demo Gif of all screens
 
 This is a demo project developed with few screens from dribble.com
